@@ -1,6 +1,4 @@
-
 class Dieta
-  
 
     def initialize()
      
