@@ -1,5 +1,5 @@
 require "spec_helper"
-require "./lib/prac6/Dieta"
+require "./lib/prct6/Dieta"
 
   describe Dieta do
     
