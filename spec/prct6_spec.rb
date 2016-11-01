@@ -10,7 +10,8 @@ require "./lib/prct6/Dieta"
     context "Prueba de las partes fundamentales de la clase Dieta:" do
     
       it "-> El proyecto debe tener un numero de version" do
-        expect(Prac6::VERSION).not_to be nil
+
+        expect(Prct6::VERSION).not_to be nil
       end
     
       it "-> Debe existir un objeto y estar inicializado." do

@@ -1,9 +1,8 @@
 class Dieta
-  
-    attr_reader :nombre
-    def initialize(nombre,porc)
-        @nombre = nombre
-        @porcent = porc
+
+
+    def initialize()
+     
     end
     
     def m_nombre()
