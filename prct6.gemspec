@@ -6,7 +6,7 @@ require 'prct6/version'
 Gem::Specification.new do |spec|
   spec.name          = "prct6"
   spec.version       = Prct6::VERSION
-  spec.authors       = ["Óscar Jesús Socas González"]
+  spec.authors       = ["Óscar Jesús Socas González and Cristian Manuel Ángel Díaz"]
   spec.email         = ["alu0100768152@ull.edu.es"]
 
   spec.summary       = %q{Se especifica la información de la práctica}
