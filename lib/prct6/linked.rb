@@ -60,6 +60,15 @@ class Linked
         
         @head = @head.next
         @aux3.next=nil
-    end  
+    end 
+    
+    def empty?
+        
+        if @head.nil?
+            return true
+        else 
+            return false
+        end
+    end
     
 end
