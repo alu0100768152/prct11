@@ -11,8 +11,9 @@ require "spec_helper"
       end
     
       it "-> Debe existir un objeto y estar inicializado." do
-        expect(objeto).not_to be_nil
+        expect(lista).not_to be_nil
       end
+      
       
     end
   end
