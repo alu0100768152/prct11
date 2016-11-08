@@ -50,7 +50,7 @@ class Raciones
         for i in (0..size-1)
             aux<<" #{@por[i]}% "
 			i+=1
-			if i<size-1
+			if i<size
 			    aux<<"-"
 			end
         end
