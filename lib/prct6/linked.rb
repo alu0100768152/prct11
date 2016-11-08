@@ -51,4 +51,15 @@ class Linked
       
     end 
     
+    def ex_1er_elemento()
+        if @head.nil?
+           return false
+        end
+        
+        @aux3=head
+        
+        @head = @head.next
+        @aux3.next=nil
+    end  
+    
 end
