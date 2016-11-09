@@ -1,3 +1,5 @@
+Node = Struct.new(:value, :next)
+
 class Linked
     
     attr_accessor :head
