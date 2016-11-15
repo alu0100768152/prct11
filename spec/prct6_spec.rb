@@ -142,3 +142,29 @@ require "spec_helper"
     end
     
   end
+  
+  describe Edad do
+    
+    @nombre = 'ALMUERZO'
+    @porcent= '30'
+    @comida = ["Crema de bubango, ","Tomate con espinacas, ","Ensalada básica con zanahoria rallada, "]
+    @prop_aprox = ["2 cucharones, ","5 a 6 c/soperas, ", ""]
+    @prop_exact = ["200 g","150 g","guarnición de 120 g"]
+    @kcal = "785.9"
+    @por = ["19","34","47"] 
+    #Dieta.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por)
+    @tipo="verduras y otras hortalizas"
+    ob_edad=Edad.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por,@tipo)
+    
+    context "Prueba de las partes fundamentales de la clase Alimentos:" do
+      
+      it "-> El proyecto debe tener un numero de version" do
+        expect(Prct6::VERSION).not_to be nil
+      end
+      
+      it "-> Debe existir un objeto y estar inicializado." do
+        expect(ob_edad).not_to be_nil
+      end
+    end
+    
+  end
