@@ -58,3 +58,13 @@ class Alimentos
     end 
     
 end
+
+class Edad 
+
+    
+    def initialize(nombre,porc,comida,prop_aprox,prop_exact,kcal,por,desde,hasta)
+      
+        @desde=desde
+        @hasta=hasta
+    end
+end

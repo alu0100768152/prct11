@@ -153,10 +153,11 @@ require "spec_helper"
     @kcal = "785.9"
     @por = ["19","34","47"] 
     #Dieta.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por)
-    @tipo="verduras y otras hortalizas"
-    ob_edad=Edad.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por,@tipo)
+    @tipo=9
+    @hasta=13
+    ob_edad=Edad.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por,@dede,@hasta)
     
-    context "Prueba de las partes fundamentales de la clase Alimentos:" do
+    context "Prueba de las partes fundamentales de la clase Edad:" do
       
       it "-> El proyecto debe tener un numero de version" do
         expect(Prct6::VERSION).not_to be nil
