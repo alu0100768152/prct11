@@ -49,7 +49,7 @@ end
 
 
 #############################################
-class Alimentos 
+class Alimentos < Dieta
     
     attr_reader :tipo
     def initialize(nombre,porc,comida,prop_aprox,prop_exact,kcal,por,tipo)
@@ -59,7 +59,7 @@ class Alimentos
     
 end
 
-class Edad 
+class Edad < Dieta
 
     
     def initialize(nombre,porc,comida,prop_aprox,prop_exact,kcal,por,desde,hasta)
