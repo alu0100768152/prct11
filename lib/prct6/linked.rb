@@ -1,8 +1,8 @@
-Node = Struct.new(:value, :next)
+Node = Struct.new(:value, :prev, :next)
 
 class Linked
     
-    attr_accessor :head
+    attr_accessor :head, :tail, :prev
     
     def initialize
         @head = @tail = nil
@@ -13,11 +13,15 @@ class Linked
         
         node = Node.new(value)
     
-        @head = node if @head.nil?
-        @tail.next = node unless @tail.nil?
-    
+         @head = node if @head.nil?
+        if(@tail!=nil)
+            @tail.next = node 
+            node.prev = @tail
+            @contador=@contador+1
+        end
         @tail = node
         #@contador=@contador+1
+      
         
     end
     
@@ -71,5 +75,21 @@ class Linked
             return false
         end
     end
+    
+    def extract_tail()
+        aux=""
+        if @tail.nil?
+            return false
+        end
+        
+        @aux4 = @tail.value
+        @tail = @tail.prev
+        #@aux4.prev = nil
+        @tail.next = nil
+        
+        return aux
+        
+        
+    end    
     
 end
