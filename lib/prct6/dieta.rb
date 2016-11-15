@@ -53,10 +53,25 @@ class Alimentos < Dieta
     
     attr_reader :tipo
     def initialize(nombre,porc,comida,prop_aprox,prop_exact,kcal,por,tipo)
-        
+        super(nombre,porc,comida,prop_aprox,prop_exact,kcal,por)
         @tipo=tipo
     end 
     
+    def to_s
+        
+        todo=""
+        todo="Menú de #{@tipo}:\n"
+        todo << m_nombre() 
+        todo << "\n"
+        todo << comidayprop()
+        todo << "\n"
+        todo << vct()
+        
+        "#{todo}"
+        
+
+    end    
+        
 end
 
 class Edad < Dieta
