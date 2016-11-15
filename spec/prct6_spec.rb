@@ -139,6 +139,27 @@ require "spec_helper"
       it "-> Debe existir un objeto y estar inicializado." do
         expect(ob_alimentos).not_to be_nil
       end
+      
+            it "-> ob_alimentos debe pertenecer a Object." do
+        expect(ob_alimentos.is_a?Object).to eq(true)
+      end
+      
+      it "-> ob_alimentos debe pertenecer a BasicObject." do
+        expect(ob_alimentos.is_a?BasicObject).to eq(true)
+      end
+      
+      it "-> ob_alimentos no debe ser una instancia de Object." do
+        expect(ob_alimentos.instance_of?Object).to eq(false)
+      end
+      
+      
+      it "-> ob_alimentos debe ser una instancia de Alimentos." do
+        expect(ob_alimentos.instance_of?Alimentos).to eq(true)
+      end
+      
+      it "-> La superclass de Alimentos debe ser Dieta." do
+        expect(Alimentos.superclass).to eq(Dieta)
+      end
     end
     
   end
@@ -167,26 +188,6 @@ require "spec_helper"
         expect(ob_edad).not_to be_nil
       end
       
-      it "-> ob_alimentos debe pertenecer a Object." do
-        expect(ob_alimentos.is_a?Object).to eq(true)
-      end
-      
-      it "->ob_alimentos debe pertenecer a BasicObject." do
-        expect(ob_alimentos.is_a?BasicObject).to eq(true)
-      end
-      
-      it "-> ob_alimentos no debe ser una instancia de Object." do
-        expect(ob_alimentos.instance_of?Object).to eq(false)
-      end
-      
-      
-      it "-> ob_alimentos debe ser una instancia de Alimentos." do
-        expect(ob_alimentos.instance_of?Alimentos).to eq(true)
-      end
-      
-      it "-> La superclass de Alimentos debe ser Dieta." do
-        expect(Alimentos.superclass).to eq(Dieta)
-      end
       
     end
     
