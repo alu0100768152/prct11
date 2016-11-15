@@ -112,6 +112,10 @@ require "spec_helper"
         expect(lista.empty?).to eq(false)
       end
       
+      it "->Extrael primer elemento" do
+        lista.extract_tail()
+        expect(lista.to_s()).to eq("\nMEDIA MANANA (10%)\n\n- Cerezas, 10-12 unidades medianas, 120 g\n- Galletas bífidus con sésamo, 4 unidades, 40 g\n\nV.C.T. |%    255,5 kcal | 7% - 24% - 69% \n\n\nALMUERZO (30-35%)\n\n- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200 g\n- Escalope de ternera, 1 bistec mediano, 100 g\n- Ensalada básica con zanahoria rallada, guarnición de 120 g\n- Mandarina, 1 grande, 180 g\n- Pan de trigo integral, 1 rodaja, 20 g\n\nV.C.T. |%    785.9 kcal | 19% - 34% - 47% \n\n\nMERIENDA (15%)\n\n- Galletas de leche con chocolate y yogur, 4 unidades, 46 g\n- Flan de vainilla sin huevo, 1 unidad, 110 g\n\nV.C.T. |%    313,6 kcal | 10% - 30% - 60% \n\n")
+      end
     end
       
     end
