@@ -214,6 +214,10 @@ require "spec_helper"
         expect(Edad.superclass).to eq(Dieta)
       end
       
+      it "-> Debe  existir distintos tipos de menús según la edad." do
+        expect(ob_edad.to_s()).to eq("Menú de 9 a 13 años:\nALMUERZO (30%)\n\n- Crema de bubango, 2 cucharones, 200 g\n- Tomate con espinacas, 5 a 6 c/soperas, 150 g\n- Ensalada básica con zanahoria rallada, guarnición de 120 g\n\nV.C.T. |%    785.9 kcal | 19% - 34% - 47% \n")
+      end 
+      
     end
     
   end
