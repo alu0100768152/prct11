@@ -1,61 +1,60 @@
+
 class Dieta
   
-    attr_reader :nombre
-    def initialize(nombre,porc)
+    attr_accessor :nombre, :porcent, :comida, :prop_aprox, :prop_exact, :kcal, :por
+    
+    def initialize(nombre,porc,comida,prop_aprox,prop_exact,kcal,por)
         @nombre = nombre
         @porcent = porc
+        @comida = comida
+        @prop_aprox = prop_aprox
+        @prop_exact = prop_exact
+        @kcal = kcal
+        @por = por
     end
     
     def m_nombre()
        "#{@nombre} (#{@porcent}%)\n"
     end
     
-    def m_raciones(comida,prop_aprox,prop_exact,kcal,por)
-        @food = Raciones.new(comida,prop_aprox,prop_exact,kcal,por)
-        @food.comidayprop()
-        @food.vct()
-    end
-    
-   # def to_s()
-    
-    #end
-end
-
-class Raciones
-    def initialize(comida,prop_aprox,prop_exact,kcal,por)
-        @comida = comida
-        @prop_aprox = prop_aprox
-        @prop_exact = prop_exact
-        @kcal = kcal
-        @por = por 
-    end
-    
     def comidayprop()
-		aux=""
-		size=@comida.length
-		for i in (0..size-1)
-			aux<<"- #{@comida[i]}#{@prop_aprox[i]}#{@prop_exact[i]}"
-			
-			i+=1
-			
-			aux+="\n"
-		end
-		"#{aux}"
+    	aux=""
+    	tam=@comida&.length || 0
+    	i=0
+    	for i in (0..tam-1)
+    		aux<<"- #{@comida[i]}#{@prop_aprox[i]}#{@prop_exact[i]}"
+    		
+    		i+=1
+    		
+    		aux+="\n"
+    	end
+    	"#{aux}"
     end
-	
-	def vct()
+
+    def vct()
         aux = "V.C.T. |%    "
         aux << "#{@kcal} kcal |"
-        size = @por.length
-        for i in (0..size-1)
+        tam = @por&.length || 0
+        i=0
+        for i in (0..tam-1)
             aux<<" #{@por[i]}% "
-			i+=1
-			if i<size
-			    aux<<"-"
-			end
+    		i+=1
+    		if i<tam
+    		    aux<<"-"
+    		end
         end
-		"#{aux}\n"
-	end
+    	"#{aux}\n"
+    end
 end
 
 
+#############################################
+class Alimentos 
+    
+    attr_reader :tipo
+    def initialize(nombre,porc,comida,prop_aprox,prop_exact,kcal,por,tipo)
+        
+        @tipo=tipo
+    end 
+    
+end

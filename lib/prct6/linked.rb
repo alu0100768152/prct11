@@ -38,12 +38,11 @@ class Linked
             @prop_exact = @aux.value[1][2]
             @kcal = @aux.value[1][3]
             @por = @aux.value[1][4]
-            ob_diet=Dieta.new(@nomb,@porc)
-            ob_raci=Raciones.new(@comida,@prop_aprox,@prop_exact,@kcal,@por)
-                    
+            ob_diet=Dieta.new(@nomb,@porc,@comida,@prop_aprox,@prop_exact,@kcal,@por)
+           
             aux2+="\n#{ob_diet.m_nombre()}\n"
-            aux2+="#{ob_raci.comidayprop()}\n"
-            aux2+="#{ob_raci.vct()}\n"
+            aux2+="#{ob_diet.comidayprop()}\n"
+            aux2+="#{ob_diet.vct()}\n"
              
             
             @aux=@aux.next

@@ -10,16 +10,16 @@ require "spec_helper"
     @prop_exact = ["200 g","100 g","guarnición de 120 g", "180 g", "20 g"]
     @kcal = "785.9"
     @por = ["19","34","47"] 
-    objeto = Dieta.new(@nombre, @porcent)
-    comida = Raciones.new(@comida,@prop_aprox,@prop_exact,@kcal,@por)
+    objeto = Dieta.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por)
+    
     
     context "Prueba de las partes fundamentales de la clase Dieta:" do
     
-      it "-> El proyecto debe tener un numero de version" do
+      it "El proyecto debe tener un numero de version" do
         expect(Prct6::VERSION).not_to be nil
       end
     
-      it "-> Debe existir un objeto y estar inicializado." do
+      it "Debe existir un objeto y estar inicializado." do
         expect(objeto).not_to be_nil
       end
       
@@ -28,12 +28,13 @@ require "spec_helper"
       end
       
       it "Raciones de comida" do
-        expect(comida.comidayprop()).to eq("- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200 g\n- Escalope de ternera, 1 bistec mediano, 100 g\n- Ensalada básica con zanahoria rallada, guarnición de 120 g\n- Mandarina, 1 grande, 180 g\n- Pan de trigo integral, 1 rodaja, 20 g\n")
+        expect(objeto.comidayprop()).to eq("- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200 g\n- Escalope de ternera, 1 bistec mediano, 100 g\n- Ensalada básica con zanahoria rallada, guarnición de 120 g\n- Mandarina, 1 grande, 180 g\n- Pan de trigo integral, 1 rodaja, 20 g\n")
       end
       
       it "Información alimenticia" do
-        expect(comida.vct()).to eq("V.C.T. |%    785.9 kcal | 19% - 34% - 47% \n")
+        expect(objeto.vct()).to eq("V.C.T. |%    785.9 kcal | 19% - 34% - 47% \n")
       end 
+      
     end
   end
 
@@ -117,6 +118,7 @@ require "spec_helper"
   end
   
   describe Alimentos do
+    
     @nombre = 'ALMUERZO'
     @porcent= '30'
     @comida = ["Crema de bubango, ","Tomate con espinacas, ","Ensalada básica con zanahoria rallada, "]
@@ -124,6 +126,7 @@ require "spec_helper"
     @prop_exact = ["200 g","150 g","guarnición de 120 g"]
     @kcal = "785.9"
     @por = ["19","34","47"] 
+    #Dieta.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por)
     @tipo="verduras y otras hortalizas"
     ob_alimentos=Alimentos.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por,@tipo)
     
@@ -132,6 +135,7 @@ require "spec_helper"
       it "-> El proyecto debe tener un numero de version" do
         expect(Prct6::VERSION).not_to be nil
       end
+      
       it "-> Debe existir un objeto y estar inicializado." do
         expect(ob_alimentos).not_to be_nil
       end
