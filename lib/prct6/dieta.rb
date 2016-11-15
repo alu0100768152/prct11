@@ -76,10 +76,25 @@ end
 
 class Edad < Dieta
 
-    
+    attr_reader :rango
     def initialize(nombre,porc,comida,prop_aprox,prop_exact,kcal,por,desde,hasta)
-      
+        super(nombre,porc,comida,prop_aprox,prop_exact,kcal,por)
         @desde=desde
         @hasta=hasta
     end
+
+    def to_s
+        todo=""
+        todo="Menú de #{@desde} a #{@hasta} años:\n"
+        todo << m_nombre() 
+        todo << "\n"
+        todo << comidayprop()
+        todo << "\n"
+        todo << vct()
+        
+        "#{todo}"
+   
+        
+    end
+
 end

@@ -179,9 +179,9 @@ require "spec_helper"
     @kcal = "785.9"
     @por = ["19","34","47"] 
     #Dieta.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por)
-    @tipo=9
+    @desde=9
     @hasta=13
-    ob_edad=Edad.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por,@dede,@hasta)
+    ob_edad=Edad.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por,@desde,@hasta)
     
     context "Prueba de las partes fundamentales de la clase Edad:" do
       
