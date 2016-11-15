@@ -140,7 +140,7 @@ require "spec_helper"
         expect(ob_alimentos).not_to be_nil
       end
       
-            it "-> ob_alimentos debe pertenecer a Object." do
+      it "-> ob_alimentos debe pertenecer a Object." do
         expect(ob_alimentos.is_a?Object).to eq(true)
       end
       
@@ -160,6 +160,11 @@ require "spec_helper"
       it "-> La superclass de Alimentos debe ser Dieta." do
         expect(Alimentos.superclass).to eq(Dieta)
       end
+
+      it "-> Debe  existir distintos tipos de menús." do
+        expect(ob_alimentos.to_s()).to eq("Menú de verduras y otras hortalizas:\nALMUERZO (30%)\n\n- Crema de bubango, 2 cucharones, 200 g\n- Tomate con espinacas, 5 a 6 c/soperas, 150 g\n- Ensalada básica con zanahoria rallada, guarnición de 120 g\n\nV.C.T. |%    785.9 kcal | 19% - 34% - 47% \n")
+      end      
+      
     end
     
   end
@@ -188,6 +193,26 @@ require "spec_helper"
         expect(ob_edad).not_to be_nil
       end
       
+      it "-> ob_edad debe pertenecer a Object." do
+        expect(ob_edad.is_a?Object).to eq(true)
+      end
+      
+      it "-> ob_edad debe pertenecer a BasicObject." do
+        expect(ob_edad.is_a?BasicObject).to eq(true)
+      end
+      
+      it "-> ob_edad no debe ser una instancia de Object." do
+        expect(ob_edad.instance_of?Object).to eq(false)
+      end
+      
+      
+      it "-> ob_edad debe ser una instancia de Edad." do
+        expect(ob_edad.instance_of?Edad).to eq(true)
+      end
+      
+      it "-> La superclass de Edad debe ser Dieta." do
+        expect(Edad.superclass).to eq(Dieta)
+      end
       
     end
     
