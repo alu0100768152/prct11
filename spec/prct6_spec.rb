@@ -15,23 +15,23 @@ require "spec_helper"
     
     context "Prueba de las partes fundamentales de la clase Dieta:" do
     
-      it "El proyecto debe tener un numero de version" do
+      it "-> El proyecto debe tener un numero de version" do
         expect(Prct6::VERSION).not_to be nil
       end
     
-      it "Debe existir un objeto y estar inicializado." do
+      it "-> Debe existir un objeto y estar inicializado." do
         expect(objeto).not_to be_nil
       end
       
-      it "Nombre de la dieta" do
+      it "-> Nombre de la dieta" do
         expect(objeto.m_nombre()).to eq("ALMUERZO (30-35%)\n")
       end
       
-      it "Raciones de comida" do
+      it "-> Raciones de comida" do
         expect(objeto.comidayprop()).to eq("- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200 g\n- Escalope de ternera, 1 bistec mediano, 100 g\n- Ensalada básica con zanahoria rallada, guarnición de 120 g\n- Mandarina, 1 grande, 180 g\n- Pan de trigo integral, 1 rodaja, 20 g\n")
       end
       
-      it "Información alimenticia" do
+      it "-> Información alimenticia" do
         expect(objeto.vct()).to eq("V.C.T. |%    785.9 kcal | 19% - 34% - 47% \n")
       end 
       
@@ -178,7 +178,11 @@ require "spec_helper"
 
       it "-> Debe  existir distintos tipos de menús." do
         expect(ob_alimentos.to_s()).to eq("Menú de verduras y otras hortalizas:\nALMUERZO (30%)\n\n- Crema de bubango, 2 cucharones, 200 g\n- Tomate con espinacas, 5 a 6 c/soperas, 150 g\n- Ensalada básica con zanahoria rallada, guarnición de 120 g\n\nV.C.T. |%    785.9 kcal | 19% - 34% - 47% \n")
-      end      
+      end  
+      
+      it "-> Debe existir el metodo to_s." do 
+        expect(ob_alimentos).to respond_to(:to_s)
+      end
       
     end
     
@@ -229,8 +233,12 @@ require "spec_helper"
         expect(Edad.superclass).to eq(Dieta)
       end
       
-      it "-> Debe  existir distintos tipos de menús según la edad." do
+      it "-> Debe existir distintos tipos de menús según la edad." do
         expect(ob_edad.to_s()).to eq("Menú de 9 a 13 años:\nALMUERZO (30%)\n\n- Crema de bubango, 2 cucharones, 200 g\n- Tomate con espinacas, 5 a 6 c/soperas, 150 g\n- Ensalada básica con zanahoria rallada, guarnición de 120 g\n\nV.C.T. |%    785.9 kcal | 19% - 34% - 47% \n")
+      end 
+      
+      it "-> Debe existir el metodo to_s." do 
+        expect(ob_edad).to respond_to(:to_s)
       end 
       
     end
