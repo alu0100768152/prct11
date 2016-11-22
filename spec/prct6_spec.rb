@@ -104,6 +104,10 @@ require "spec_helper"
         expect(lista.max).to eq(785.9)
       end 
       
+      it "->Todos los V.C.T de los elementos de la lista ordenados" do
+        expect(lista.sort).to eq([255.5, 288.0, 313.6, 544.9, 561.6, 785.9, 785.9])
+      end
+      
 ###########################################################################    
     end
     
