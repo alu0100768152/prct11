@@ -70,20 +70,20 @@ require "spec_helper"
   describe Linked do
     
     a=["DESAYUNO", "15"]
-    b=[["Leche desnatada, ","Cacao instantaneo, ","Cereales de desayuno en hojuelas, ","Almendras laminadas (10 unidades), "],["1 vaso, ","1 c/sopera, ", "1 bol peque~no, ", "2 c/soperas, "],["200 ml","10 g","40 g", "10 g"],"288,0",["17","21","62"] ]
+    b=[["Leche desnatada, ","Cacao instantaneo, ","Cereales de desayuno en hojuelas, ","Almendras laminadas (10 unidades), "],["1 vaso, ","1 c/sopera, ", "1 bol peque~no, ", "2 c/soperas, "],["200 ml","10 g","40 g", "10 g"],288.0,["17","21","62"] ]
 
     c=["MEDIA MANANA","10"]
-    d=[["Cerezas, ", "Galletas bífidus con sésamo, "],["10-12 unidades medianas, ","4 unidades, "],["120 g","40 g"],"255,5", ["7", "24", "69"]]
+    d=[["Cerezas, ", "Galletas bífidus con sésamo, "],["10-12 unidades medianas, ","4 unidades, "],["120 g","40 g"],255.5, ["7", "24", "69"]]
     
     e=["ALMUERZO", "30-35"]
-    f=[["Macarrones con salsa de tomate y queso parmesano, ","Escalope de ternera, ","Ensalada básica con zanahoria rallada, ","Mandarina, ","Pan de trigo integral, "],["1 1/2 cucharón, ","1 bistec mediano, ", "", "1 grande, ", "1 rodaja, "],["200 g","100 g","guarnición de 120 g", "180 g", "20 g"],"785.9",["19","34","47"] ]
+    f=[["Macarrones con salsa de tomate y queso parmesano, ","Escalope de ternera, ","Ensalada básica con zanahoria rallada, ","Mandarina, ","Pan de trigo integral, "],["1 1/2 cucharón, ","1 bistec mediano, ", "", "1 grande, ", "1 rodaja, "],["200 g","100 g","guarnición de 120 g", "180 g", "20 g"],785.9,["19","34","47"] ]
 
     g=["MERIENDA","15"]
-    h=[["Galletas de leche con chocolate y yogur, ","Flan de vainilla sin huevo, "],["4 unidades, ","1 unidad, "],["46 g","110 g"],"313,6",["10","30","60"]]
+    h=[["Galletas de leche con chocolate y yogur, ","Flan de vainilla sin huevo, "],["4 unidades, ","1 unidad, "],["46 g","110 g"],313.6,["10","30","60"]]
     
     i=["CENA","25-30"]
-    j=[["Crema de bubango, ","Tortilla campesina con espinacas, ","Tomate en dados con atún, ","Piña natural o en su jugo picada, ","Pan de trigo integral, "],["2 cucharones, ","1 cuña grande, ", "5 a 6 c/soperas, ", "5 c/soperas, ","1 rodaja, "],["200 g","150 g","150 g", "120 g", "20 g"],"561,6",["19","40","41"]]
-    
+    j=[["Crema de bubango, ","Tortilla campesina con espinacas, ","Tomate en dados con atún, ","Piña natural o en su jugo picada, ","Pan de trigo integral, "],["2 cucharones, ","1 cuña grande, ", "5 a 6 c/soperas, ", "5 c/soperas, ","1 rodaja, "],["200 g","150 g","150 g", "120 g", "20 g"],561.6,["19","40","41"]]
+     
     lista = Linked.new()
     array1= [a,b]
     array2= [c,d]
