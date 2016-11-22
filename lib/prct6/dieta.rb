@@ -1,6 +1,8 @@
 
 class Dieta
-  
+    
+    include Comparable
+    
     attr_accessor :nombre, :porcent, :comida, :prop_aprox, :prop_exact, :kcal, :por
     
     def initialize(nombre,porc,comida,prop_aprox,prop_exact,kcal,por)
@@ -45,7 +47,15 @@ class Dieta
         end
     	"#{aux}\n"
     end
+############################## P9 #####################################
+    def <=>(other)
+        
+        @kcal<=>other.kcal
+    
+    end
+#######################################################################    
 end
+
 
 
 #############################################
