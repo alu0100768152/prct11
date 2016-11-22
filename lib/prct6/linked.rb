@@ -2,6 +2,8 @@ Node = Struct.new(:value, :prev, :next)
 
 class Linked
     
+    include Enumerable
+    
     attr_accessor :head, :tail, :prev
     
     def initialize
@@ -112,6 +114,13 @@ class Linked
         
     end   
     
+    def each
+        nodo = head
+        while(nodo != nil)
+            yield nodo.value[1][3]
+            nodo = nodo.next
+        end
+    end
     
     
 end
