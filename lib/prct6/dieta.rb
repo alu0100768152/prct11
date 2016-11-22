@@ -54,7 +54,13 @@ class Dieta
     
     end
     
-   
+    def ==(other)
+        if(@kcal==other.kcal && @por==other.por)
+            return true
+        else
+            return false
+        end
+    end
 #######################################################################    
 end
 
