@@ -61,6 +61,10 @@ require "spec_helper"
       it "-> El V.C.T del objeto no tiene que ser menor o igual que el del objeto2 " do 
         expect(objeto <= objeto2).to eq(false)
       end
+            
+      it "-> El V.C.T del objeto2 es igual al objeto3 pero los porcentajes no son iguales " do 
+        expect(objeto2 == objeto3).to eq(false)
+      end
       ###############################################################################
       
     end
