@@ -95,7 +95,16 @@ require "spec_helper"
       it "-> La lista tiene que estar vacia" do
         expect(Linked.new()).not_to be nil
       end
-  
+################################## P9 #####################################
+      it "->el menor V.C.T de los elementos de la lista" do
+        expect(lista.min).to eq(255.5)
+      end
+      
+      it "->el mayor V.C.T de los elementos de la lista" do
+        expect(lista.max).to eq(785.9)
+      end 
+      
+###########################################################################    
     end
     
     
