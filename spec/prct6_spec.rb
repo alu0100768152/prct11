@@ -12,7 +12,17 @@ require "spec_helper"
     @por = ["19","34","47"] 
     objeto = Dieta.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por)
     
+    ########################  P9  ################################################
+    @nombre = 'ALMUERZO'
+    @porcent= '30-35'
+    @comida = ["Macarrones con salsa de tomate y queso parmesano, ","Escalope de ternera, ","Ensalada básica con zanahoria rallada, ","Mandarina, ","Pan de trigo integral, "]
+    @prop_aprox = ["1 1/2 cucharón, ","1 bistec mediano, ", "", "1 grande, ", "1 rodaja, "]
+    @prop_exact = ["200 g","100 g","guarnición de 120 g", "180 g", "20 g"]
+    @kcal = "200.9"
+    @por = ["19","34","47"] 
+    objeto2 = Dieta.new(@nombre, @porcent,@comida,@prop_aprox,@prop_exact,@kcal,@por)
     
+    ###############################################################################
     context "Prueba de las partes fundamentales de la clase Dieta:" do
     
       it "-> El proyecto debe tener un numero de version" do
@@ -34,6 +44,24 @@ require "spec_helper"
       it "-> Información alimenticia" do
         expect(objeto.vct()).to eq("V.C.T. |%    785.9 kcal | 19% - 34% - 47% \n")
       end 
+      ########################  P9  ################################################
+      
+      it "-> El V.C.T del objeto es mayor que el del objeto2 " do 
+        expect(objeto > objeto2).to eq(true)
+      end
+
+      it "-> El V.C.T del objeto no tiene que ser menor que el del objeto2 " do 
+        expect(objeto < objeto2).to eq(false)
+      end
+      
+      it "-> El V.C.T del objeto es mayor o igual que el del objeto2 " do 
+        expect(objeto >= objeto2).to eq(true)
+      end
+      
+      it "-> El V.C.T del objeto no tiene que ser menor o igual que el del objeto2 " do 
+        expect(objeto <= objeto2).to eq(false)
+      end
+      ###############################################################################
       
     end
   end
@@ -173,7 +201,7 @@ require "spec_helper"
       end
       
       it "-> La superclass de Alimentos debe ser Dieta." do
-        expect(Alimentos.superclass).to eq(Dieta)
+          expect(Alimentos.superclass).to eq(Dieta)
       end
 
       it "-> Debe  existir distintos tipos de menús." do
