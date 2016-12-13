@@ -112,9 +112,61 @@ require "spec_helper"
       
       end 
       
+      desayuno_M = MenuDSL.new("Ejemplo") do
+
+        title  "Desayuno"
+        ingest  :max => 15
+        plato   :descripcion => "Leche desnatada",
+                :porcion => "1 1/2 cucharón",
+                :gramos => 200
+        plato   :descripcion => "Cereales Integrales",
+                :porcion => "Dos puñados",
+                :gramos => 60
+        plato   :descripcion => "Pan de trigo integral con mantequilla", :porcion => "1 rodaja", :gramos => 20
+        porcent :vct => 354.9, :proteinas => 16, :grasas => 23, :hidratos => 30
+      
+      end  
+      
+      almuerzo_M = MenuDSL.new("Ejemplo") do
+
+        title  "Almuerzo"
+        ingest  :min => 30, :max => 35
+        plato   :descripcion => "Pescado en rodajas con mojo verde",
+                :porcion => "3 rodajas",
+                :gramos => 150
+        plato   :descripcion => "Salteado de verduras",
+                :porcion => "Medio plato",
+                :gramos => 100
+        plato   :descripcion => "Revuelto de champiñones y gambas",
+                :porcion => "Un plato pequeño",
+                :gramos => 150
+        plato   :descripcion => "Manzana", :porcion => "1 grande", :gramos => 180
+        porcent :vct => 455.9, :proteinas => 12, :grasas => 28, :hidratos => 65
+      
+      end 
+      
+      cena_M = MenuDSL.new("Ejemplo") do
+  
+        title  "Cena"
+        ingest  :min => 15, :max => 20
+        plato   :descripcion => "Sandwich tropical",
+                :porcion => "1 sandwich",
+                :gramos => 250
+        plato   :descripcion => "Yogur de fresa",
+                :porcion => "1 vasito",
+                :gramos => 125
+        plato   :descripcion => "Pera", :porcion => "1 grande", :gramos => 180
+        porcent :vct => 420.4, :proteinas => 16, :grasas => 32, :hidratos => 52
+      
+      end
+      
       @lista_L.add(desayuno_L)
       @lista_L.add(almuerzo_L)
       @lista_L.add(cena_L)
+      
+      @lista_M.add(desayuno_M)
+      @lista_M.add(almuerzo_M)
+      @lista_M.add(cena_M)
     
     end
   
