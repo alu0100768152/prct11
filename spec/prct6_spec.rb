@@ -3,7 +3,11 @@ require "spec_helper"
 
   describe MenuDSL do
     
-
+    before :each do 
+      @almuerzo = MenuDSL.new("Ejemplo") do
+      
+      end
+    end
     
     context "Prueba de las partes fundamentales de la clase Dieta:" do
     
