@@ -19,6 +19,10 @@ require "spec_helper"
         expect(@almuerzo).not_to be_nil
       end
       
+      it "-> Dieta Almuerzo" do
+        expect(@almuerzo.titulo).to eq("Almuerzo")
+      end
+      
     end
     
   end
