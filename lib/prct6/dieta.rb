@@ -1,7 +1,7 @@
 
 class MenuDSL
     
-    def initialize
+    def initialize(nombre, &block)
         
     end
     
