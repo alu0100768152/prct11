@@ -6,6 +6,7 @@ require "spec_helper"
     before :each do 
       @almuerzo = MenuDSL.new("Ejemplo") do
           title  "Almuerzo"
+          ingest  :min => 30, :max => 35
       end
     end
     
