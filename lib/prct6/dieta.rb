@@ -1,13 +1,14 @@
 
 class MenuDSL
     
-    attr_accessor :nombre, :titulo, :ingesta, :platos
+    attr_accessor :nombre, :titulo, :ingesta, :platos, :porcentajes
     
     def initialize(nombre, &block)
         self.nombre = nombre
         self.titulo = ""
         self.ingesta = []        
         self.platos = []
+        self.porcentajes = []
         
         if block_given?
             if block.arity == 1
@@ -45,5 +46,16 @@ class MenuDSL
         
         platos << dish
     end
+    
+    def porcent(options = {})
+        por = []
+        por << "#{options[:vct]}"
+        por << "#{options[:proteinas]}"
+        por << "#{options[:grasas]}"
+        por << "#{options[:hidratos]}"
+        
+        porcentajes << por
+        
+    end 
     
 end 
