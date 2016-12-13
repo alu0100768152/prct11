@@ -56,7 +56,9 @@ require "spec_helper"
     
     before :each do 
      
-    @lista_L = Linked.new() 
+    @lista_L = Linked.new()
+    
+    @lista_M = Linked.new()
     
     end
   
