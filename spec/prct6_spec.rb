@@ -112,7 +112,7 @@ require "spec_helper"
       
       end 
       
-      desayuno_M = MenuDSL.new("Ejemplo") do
+      desayuno_M = MenuDSL.new("Dieta mediterranea") do
 
         title  "Desayuno"
         ingest  :max => 15
@@ -127,7 +127,7 @@ require "spec_helper"
       
       end  
       
-      almuerzo_M = MenuDSL.new("Ejemplo") do
+      almuerzo_M = MenuDSL.new("Dieta mediterranea") do
 
         title  "Almuerzo"
         ingest  :min => 30, :max => 35
@@ -145,7 +145,7 @@ require "spec_helper"
       
       end 
       
-      cena_M = MenuDSL.new("Ejemplo") do
+      cena_M = MenuDSL.new("Dieta mediterranea") do
   
         title  "Cena"
         ingest  :min => 15, :max => 20
@@ -199,8 +199,11 @@ require "spec_helper"
     end
     
     it "-> Dieta Martes" do
-        expect(@lista_M.to_s).to eq("Ejemplo\n=======\n\nDesayuno [15]\n- Leche desnatada, 1 1/2 cucharón, 200g\n- Cereales Integrales, Dos puñados, 60g\n- Pan de trigo integral con mantequilla, 1 rodaja, 20g\nV.C.T. | %   354.9 kcal | 16% - 23% - 30%\nEjemplo\n=======\n\nAlmuerzo [30, 35]\n- Pescado en rodajas con mojo verde, 3 rodajas, 150g\n- Salteado de verduras, Medio plato, 100g\n- Revuelto de champiñones y gambas, Un plato pequeño, 150g\n- Manzana, 1 grande, 180g\nV.C.T. | %   455.9 kcal | 12% - 28% - 65%\nEjemplo\n=======\n\nCena [15, 20]\n- Sandwich tropical, 1 sandwich, 250g\n- Yogur de fresa, 1 vasito, 125g\n- Pera, 1 grande, 180g\nV.C.T. | %   420.4 kcal | 16% - 32% - 52%\n")
+        expect(@lista_M.to_s).to eq("Dieta mediterranea\n==================\n\nDesayuno [15]\n- Leche desnatada, 1 1/2 cucharón, 200g\n- Cereales Integrales, Dos puñados, 60g\n- Pan de trigo integral con mantequilla, 1 rodaja, 20g\nV.C.T. | %   354.9 kcal | 16% - 23% - 30%\nDieta mediterranea\n==================\n\nAlmuerzo [30, 35]\n- Pescado en rodajas con mojo verde, 3 rodajas, 150g\n- Salteado de verduras, Medio plato, 100g\n- Revuelto de champiñones y gambas, Un plato pequeño, 150g\n- Manzana, 1 grande, 180g\nV.C.T. | %   455.9 kcal | 12% - 28% - 65%\nDieta mediterranea\n==================\n\nCena [15, 20]\n- Sandwich tropical, 1 sandwich, 250g\n- Yogur de fresa, 1 vasito, 125g\n- Pera, 1 grande, 180g\nV.C.T. | %   420.4 kcal | 16% - 32% - 52%\n")
     end 
     
+    it "-> Debe existir un objeto (lista_WEEK) y estar inicializado." do
+      expect(@lista_WEEK).not_to be_nil
+    end
   end
   
