@@ -5,7 +5,7 @@ require "spec_helper"
     
     before :each do 
       @almuerzo = MenuDSL.new("Ejemplo") do
-      
+          title  "Almuerzo"
       end
     end
     
