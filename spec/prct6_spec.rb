@@ -168,7 +168,8 @@ require "spec_helper"
       @lista_M.add(almuerzo_M)
       @lista_M.add(cena_M)
     
-
+      @lista_WEEK.add(@lista_L)
+      @lista_WEEK.add(@lista_M)
     
     end
   
