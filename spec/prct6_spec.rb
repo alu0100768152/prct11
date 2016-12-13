@@ -168,7 +168,7 @@ require "spec_helper"
       @lista_M.add(almuerzo_M)
       @lista_M.add(cena_M)
     
- 
+
     
     end
   
@@ -208,6 +208,8 @@ require "spec_helper"
       expect(@lista_WEEK).not_to be_nil
     end
     
-
+    it "-> Dieta semanal" do
+       expect(@lista_WEEK.to_s).to eq("Dieta mediterranea\n==================\n\nDesayuno [15]\n- Leche desnatada,  1 vaso, 200g\n- Cacao instantaneo, 1 c/sopera, 10g\n- Medio bocadillo de jamón y queso, Mitad de barra, 200g\n- Almendras laminadas, (10 unidades) 2 c/soperas, 10g\nV.C.T. | %   288.0 kcal | 48% - 49% - 34%\nDieta mediterranea\n==================\n\nAlmuerzo [30, 35]\n- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200g\n- Escalope de ternera, 1 bistec mediano, 100g\n- Ensalada básica con zanahoria rallada, guarnición, 120g\n- Mandarina, 1 grande, 180g\n- Pan de trigo integral, 1 rodaja, 20g\nV.C.T. | %   785.9 kcal | 19% - 34% - 47%\nDieta mediterranea\n==================\n\nCena [15, 20]\n- Pizza 4 quesos, 1 pizza, 300g\n- Yogur de coco, 1 vasito, 125g\n- Mandarina, 1 grande, 180g\nV.C.T. | %   489.9 kcal | 15% - 29% - 63%\nDieta mediterranea\n==================\n\nDesayuno [15]\n- Leche desnatada, 1 1/2 cucharón, 200g\n- Cereales Integrales, Dos puñados, 60g\n- Pan de trigo integral con mantequilla, 1 rodaja, 20g\nV.C.T. | %   354.9 kcal | 16% - 23% - 30%\nDieta mediterranea\n==================\n\nAlmuerzo [30, 35]\n- Pescado en rodajas con mojo verde, 3 rodajas, 150g\n- Salteado de verduras, Medio plato, 100g\n- Revuelto de champiñones y gambas, Un plato pequeño, 150g\n- Manzana, 1 grande, 180g\nV.C.T. | %   455.9 kcal | 12% - 28% - 65%\nDieta mediterranea\n==================\n\nCena [15, 20]\n- Sandwich tropical, 1 sandwich, 250g\n- Yogur de fresa, 1 vasito, 125g\n- Pera, 1 grande, 180g\nV.C.T. | %   420.4 kcal | 16% - 32% - 52%\n")
+    end
   end
   
