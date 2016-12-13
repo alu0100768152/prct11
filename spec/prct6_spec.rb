@@ -142,5 +142,9 @@ require "spec_helper"
         expect(@lista_L.to_s).to eq("Dieta mediterranea\n==================\n\nDesayuno [15]\n- Leche desnatada,  1 vaso, 200g\n- Cacao instantaneo, 1 c/sopera, 10g\n- Medio bocadillo de jamón y queso, Mitad de barra, 200g\n- Almendras laminadas, (10 unidades) 2 c/soperas, 10g\nV.C.T. | %   288.0 kcal | 48% - 49% - 34%\nDieta mediterranea\n==================\n\nAlmuerzo [30, 35]\n- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200g\n- Escalope de ternera, 1 bistec mediano, 100g\n- Ensalada básica con zanahoria rallada, guarnición, 120g\n- Mandarina, 1 grande, 180g\n- Pan de trigo integral, 1 rodaja, 20g\nV.C.T. | %   785.9 kcal | 19% - 34% - 47%\nDieta mediterranea\n==================\n\nCena [15, 20]\n- Pizza 4 quesos, 1 pizza, 300g\n- Yogur de coco, 1 vasito, 125g\n- Mandarina, 1 grande, 180g\nV.C.T. | %   489.9 kcal | 15% - 29% - 63%\n")
     end 
     
+    it "-> El head de la lista_M no puede estar a nil si hay elementos en la lista " do
+      expect(@lista_M.head.value).not_to be_nil
+    end
+    
   end
   
