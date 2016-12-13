@@ -32,20 +32,20 @@ require "spec_helper"
         expect(@almuerzo).not_to be_nil
       end
       
-      it "-> Dieta Almuerzo" do
+      it "-> El titulo ha de mostrar Almuerzo" do
         expect(@almuerzo.titulo).to eq("Almuerzo")
       end
       
-      it "-> Dieta Almuerzo" do
+      it "-> El método ingesta ha de funcionar correctamente " do
         expect(@almuerzo.ingesta).to eq([[30, 35]])
       end
       
-      it "-> Dieta Almuerzo" do
+      it "-> El método plato ha de funcionar correctamente" do
         expect(@almuerzo.platos).to eq([["Macarrones con salsa de tomate y queso parmesano","1 1/2 cucharón","200"],["Escalope de ternera","1 bistec mediano","100"],["Ensalada básica con zanahoria rallada","guarnición","120"],["Mandarina","1 grande","180"],["Pan de trigo integral","1 rodaja","20"]])
       end
       
-      it "-> Dieta Almuerzo" do
-        expect(@almuerzo.to_s).to eq("Ejemplo\n=======\n\nAlmuerzo [30, 35]\n- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200g\n- Escalope de ternera, 1 bistec mediano, 100g\n- Ensalada básica con zanahoria rallada, guarnición, 120g\n- Mandarina, 1 grande, 180g\n- Pan de trigo integral, 1 rodaja, 20g\nV.C.T. | %   785.9 kcal | 19% - 34% - 47%\n")
+      it "-> El método to_s ha de funcionar correctamente" do
+        expect(@almuerzo.to_s).to eq("Dieta mediterranea\n==================\n\nAlmuerzo [30, 35]\n- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200g\n- Escalope de ternera, 1 bistec mediano, 100g\n- Ensalada básica con zanahoria rallada, guarnición, 120g\n- Mandarina, 1 grande, 180g\n- Pan de trigo integral, 1 rodaja, 20g\nV.C.T. | %   785.9 kcal | 19% - 34% - 47%\n")
       end 
       
     end

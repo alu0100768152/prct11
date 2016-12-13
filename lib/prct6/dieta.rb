@@ -58,4 +58,24 @@ class MenuDSL
         
     end 
     
+    def to_s
+        output = nombre
+        output << "\n#{'=' * nombre.size}\n\n"
+        output << "#{titulo} "
+        ingesta.each do |ing|
+            output << "#{ing}\n"
+        end
+        
+        platos.each do |dish|
+           output << "- #{dish[0]}, #{dish[1]}, #{dish[2]}g\n" 
+        end
+        
+        porcentajes.each do |por| 
+            output << "V.C.T. | %   #{por[0]} kcal | #{por[1]}% - #{por[2]}% - #{por[3]}%\n"
+        end
+    
+        output
+            
+    end
+    
 end 
