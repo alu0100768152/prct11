@@ -68,5 +68,9 @@ require "spec_helper"
       expect(@lista_L).not_to be_nil
     end
     
+    it "-> Debe existir un objeto (lista_M) y estar inicializado." do
+      expect(@lista_M).not_to be_nil
+    end
+    
   end
   
