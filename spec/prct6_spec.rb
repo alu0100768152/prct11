@@ -28,6 +28,10 @@ require "spec_helper"
         expect(@almuerzo.ingesta).to eq([[30, 35]])
       end
       
+      it "-> Dieta Almuerzo" do
+        expect(@almuerzo.platos).to eq([["Macarrones con salsa de tomate y queso parmesano","1 1/2 cucharón","200"],["Escalope de ternera","1 bistec mediano","100"],["Ensalada básica con zanahoria rallada","guarnición","120"],["Mandarina","1 grande","180"],["Pan de trigo integral","1 rodaja","20"]])
+      end
+      
     end
     
   end
