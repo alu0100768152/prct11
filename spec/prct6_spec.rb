@@ -51,3 +51,18 @@ require "spec_helper"
     end
     
   end
+  
+  describe Linked do
+    
+    
+  
+    it "-> La lista no está vacia" do
+      expect(Linked.new()).not_to be nil
+    end
+    
+    it "-> Debe existir un objeto (lista_L) y estar inicializado." do
+      expect(@lista_L).not_to be_nil
+    end
+    
+  end
+  
