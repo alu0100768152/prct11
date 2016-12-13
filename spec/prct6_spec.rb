@@ -54,7 +54,11 @@ require "spec_helper"
   
   describe Linked do
     
+    before :each do 
+     
+    @lista_L = Linked.new() 
     
+    end
   
     it "-> La lista no está vacia" do
       expect(Linked.new()).not_to be nil
