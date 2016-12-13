@@ -57,8 +57,8 @@ require "spec_helper"
     before :each do 
      
       @lista_L = Linked.new()
-      
       @lista_M = Linked.new()
+      @lista_WEEK = Linked.new()
       
       desayuno_L = MenuDSL.new("Dieta mediterranea") do
   
@@ -168,6 +168,8 @@ require "spec_helper"
       @lista_M.add(almuerzo_M)
       @lista_M.add(cena_M)
     
+ 
+    
     end
   
     it "-> La lista no está vacia" do
@@ -205,5 +207,7 @@ require "spec_helper"
     it "-> Debe existir un objeto (lista_WEEK) y estar inicializado." do
       expect(@lista_WEEK).not_to be_nil
     end
+    
+
   end
   
