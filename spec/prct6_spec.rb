@@ -74,5 +74,13 @@ require "spec_helper"
       expect(@lista_M).not_to be_nil
     end
     
+    it "->Comprobar si esta vacío" do
+      expect(@lista_L.empty?).to eq(false)
+    end
+    
+    it "-> El head de la lista_L no puede estar a nil si hay elementos en la lista " do
+      expect(@lista_L.head.value).not_to be_nil
+    end
+    
   end
   
