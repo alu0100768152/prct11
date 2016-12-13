@@ -23,6 +23,10 @@ require "spec_helper"
         expect(@almuerzo.titulo).to eq("Almuerzo")
       end
       
+      it "-> Dieta Almuerzo" do
+        expect(@almuerzo.ingesta).to eq([[30, 35]])
+      end
+      
     end
     
   end
