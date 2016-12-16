@@ -190,6 +190,10 @@ require "spec_helper"
     end
     
     it "-> El head de la lista_L no puede estar a nil si hay elementos en la lista " do
+      expect(@lista_L.head.value.titulo).to eq("Desayuno")
+    end
+    
+    it "-> El head de la lista_L no puede estar a nil si hay elementos en la lista " do
       expect(@lista_L.head.value).not_to be_nil
     end
     
